@@ -41,4 +41,18 @@ Using List Reverse: In some languages, you can simply call the reverse function 
 Expected Time Complexity: O(n), where n is the number of elements in the array. We perform one pass through the array, swapping elements in place.
 Expected Auxiliary Space Complexity: O(1), as we only use a constant amount of additional space to track the left and right pointers.
 
+solution
 
+
+
+class Solution {
+    public void reverseArray(int arr[]) {
+        // code here
+        Integer[] boxedArray = Arrays.stream(arr).boxed().toArray(Integer []::new);
+        List<Integer>list = Arrays.asList(boxedArray);
+        Collections.reverse(list);
+        for (int i = 0; i < arr.length; i++ ) {
+            arr[i] = list.get(i);
+        }
+    }
+}
