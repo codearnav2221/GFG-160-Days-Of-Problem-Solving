@@ -1,4 +1,5 @@
 roblem Description:
+
 You are given an array of integers arr[] where each number represents a vote for a candidate. Return the candidates that have votes greater than one-third of the total votes. If there's no majority vote, return an empty array.
 
 Note: The answer should be returned in an increasing order.
@@ -23,6 +24,8 @@ No candidate occurs more than n / 3 times.
 Constraints:
 1 <= arr.size() <= 10^6
 -10^9 <= arr[i] <= 10^9
+
+
 🎯 My Approach:
 Boyer-Moore Voting Algorithm:
 
@@ -35,6 +38,8 @@ Steps:
 Traverse the array to find two majority candidates (num1 and num2) using count variables.
 Traverse again to count occurrences of the candidates and validate the result.
 Ensure the final output is sorted to meet the problem requirements.
+
+
 🕒 Time and Auxiliary Space Complexity📝
 Expected Time Complexity: O(n), where n is the size of the array. The algorithm requires two linear scans of the array, making it efficient.
 Expected Auxiliary Space Complexity: O(1), as we use only a constant amount of additional space.
